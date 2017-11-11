@@ -15,3 +15,13 @@ export interface NewsApiResponse {
   articles: any;
   error: any;
 }
+
+export interface SourcesApiResponse {
+  status: any;
+  sources: any;
+}
+
+export interface ArticleDetailApiResponse {
+  status: any;
+  sources: any;
+}
