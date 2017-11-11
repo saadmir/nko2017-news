@@ -1,20 +1,37 @@
 import Post from '../models/post.model';
+import News from '../models/news.model';
+import request from "request";
+import _ from "lodash";
 
+const url = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=58320cacd3b24867a1097657f14ac256";
 
 function load(params) {
   return Post.get(params.id);
 }
 
+// move to news
 function get(req, res) {
-  return res.json(req.post);
+  request.get(url, (error, response, body) => {
+    let json = JSON.parse(body);
+    let articles = json["articles"];
+    let list = _.each(articles, function (article) {
+      // check if it exist or not
+      return create(article);
+    });
+    return res.json(list);
+  });
 }
 
-function create(params) {
-  const post = new Post({
-    title: params.data.title,
-    content: params.data.content
+function create(data) {
+  const news = new News({
+    author: data.author,
+    title: data.title,
+    description: data.description,
+    url: data.url,
+    urlToImage: data.urlToImage,
+    publishedAt: data.publishedAt,
   });
-  return post.save();
+  return news.save();
 }
 
 function update(params) {
