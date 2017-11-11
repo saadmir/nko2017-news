@@ -12,6 +12,8 @@ router.route('/')
   
   /** POST /api/posts - Create new post */
   .post(validate(paramValidation.createPost), postCtrl.create);
+  
+ router.route('/newsSources').get(newsCtrl.sources);
 
 router.route('/:articleUrl')
 /** GET /api/post/:postId - Get post */

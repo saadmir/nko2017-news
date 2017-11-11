@@ -9,6 +9,7 @@ function load(params) {
   return Post.get(params.id);
 }
 
+// move to news
 function get(req, res) {
   request.get(url, (error, response, body) => {
     let json = JSON.parse(body);
