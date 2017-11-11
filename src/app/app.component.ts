@@ -14,12 +14,6 @@ export class AppComponent implements OnInit, OnChanges {
   public newsitems = [];
 
   constructor(private newsService: NewsService, router: Router) {
-    // Test only
-    // newsService.sources().then(
-    //   (data) => {
-    //     console.log('SOURCES', data);
-    //   }
-    // );
 
     newsService.news().then(
       (data) => {
@@ -27,7 +21,6 @@ export class AppComponent implements OnInit, OnChanges {
         this.newsitems = data;
       }
     );
-
   }
 
   ngOnInit() {
