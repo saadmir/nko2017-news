@@ -1,4 +1,3 @@
-import News from '../models/news.model';
 import Source from '../models/source.model';
 import config from '../config/config';
 
@@ -24,19 +23,19 @@ let internal = {
 };
 
 let self = {
-
+  
   list: (req, res) => {
     axios.get(`${url}/sources`)
-    .then(list => {
-      if(list.data) {
-        _.each(list.data.sources, (source) => {
-          return internal.create(source);
-        });
-      }
-      return res.json(list.data);
-    });
+      .then(list => {
+        if (list.data) {
+          _.each(list.data.sources, (source) => {
+            return internal.create(source);
+          });
+        }
+        return res.json(list.data);
+      });
   },
-
+  
   get: (req, res) => {
     return res.json({});
   }

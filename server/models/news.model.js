@@ -3,15 +3,6 @@ import mongoose from 'mongoose';
 import httpStatus from 'http-status';
 import APIError from '../helpers/APIError';
 
-// {
-//   "author": "Rachel Kaser",
-//   "title": "Twitter games are the best use of the new 280 character limit",
-//   "description": "Some genius Twitter users are already using the expanded 280 character limit on Twitter in the best way: by playing games using emoji.",
-//   "url": "https://thenextweb.com/twitter/2017/11/10/twitter-games-are-the-best-use-of-the-new-280-character-limit/",
-//   "urlToImage": "https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/05/shutterstock_255260497-social.jpg",
-//   "publishedAt": "2017-11-10T22:37:55Z"
-// },
-
 /**
  * Article  Schema maching with newsapi
  */
