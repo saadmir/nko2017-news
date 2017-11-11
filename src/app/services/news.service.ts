@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
 import _ from 'lodash';
 
-import {NewsApiResponse, SourcesApiResponse} from '../types';
+import {NewsApiResponse, SourcesApiResponse, ArticleDetailApiResponse} from '../types';
 
 @Injectable()
 export class NewsService {
@@ -45,7 +45,7 @@ export class NewsService {
   }
 
   articleDetail(): Promise<Array<any>> {
-    return this.http.get<any>(this.ARTICLE_STRIPPED_DETAIL_URL).toPromise().then((response) => {
+    return this.http.get<ArticleDetailApiResponse>(this.ARTICLE_STRIPPED_DETAIL_URL).toPromise().then((response) => {
       try {
         console.log('ARTICLE DETAIL', response);
         return response;

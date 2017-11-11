@@ -6,17 +6,20 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { NewsService } from './services/news.service';
 import { AppComponent } from './app.component';
+import { ArticleComponent } from './article/article.component';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/',  pathMatch: 'full'},
-  { path: '**', component: HomeComponent }
+  { path: '**', component: HomeComponent },
+  { path: 'article', component: ArticleComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,6 @@ const appRoutes: Routes = [
     AlertModule.forRoot()
   ],
   providers: [ NewsService ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent, ArticleComponent ]
 })
 export class AppModule { }

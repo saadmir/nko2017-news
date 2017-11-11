@@ -22,6 +22,11 @@ export interface SourcesApiResponse {
 }
 
 export interface ArticleDetailApiResponse {
-  status: any;
-  sources: any;
+  title: any;
+  content: any;
+  author: any;
+  lead_image_url: any;
+  excerpt: any;
+  word_count: any;
+  date_published: any;
 }
