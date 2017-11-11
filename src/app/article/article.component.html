@@ -7,7 +7,9 @@
           <h5 style="text-align: right">
             <small class="text-muted">{{ article.date_published | date:'MMM d, y, h:mm:ss a' }}</small>
           </h5>
-          <div style="text-align: left"><small class="text-muted">{{ article.word_count /275 | number:0}} minutes read</small></div>
+          <div style="text-align: left">
+            <small class="text-muted">~ {{ getReadingTime(article.word_count) }} read</small>
+          </div>
           <div class="card-text" style="font-size: 20px;" [innerHTML]="article.content"></div>
           <br>
           <h5>{{ article.author }}</h5>

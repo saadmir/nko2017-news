@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, ActivatedRoute, Params } from '@angular/router';
+import * as moment from 'moment';
 
 import { NewsService } from '../services/news.service';
 
@@ -16,6 +17,10 @@ export class ArticleComponent implements OnInit {
   public sourceUrl: string;
 
   constructor(private newsService: NewsService, private activatedRoute: ActivatedRoute) {
+  }
+
+  getReadingTime(count) {
+    return moment.duration(count / 275, 'minutes').humanize();
   }
 
   ngOnInit() {
