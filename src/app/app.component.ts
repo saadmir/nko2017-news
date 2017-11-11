@@ -28,13 +28,6 @@ export class AppComponent implements OnInit, OnChanges {
       }
     );
 
-    // Test only
-    // newsService.articleDetail().then(
-    //   (data) => {
-    //     console.log('ARTICLE DETAIL', data);
-    //   }
-    // );
-
   }
 
   ngOnInit() {
