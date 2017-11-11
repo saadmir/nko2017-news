@@ -8,3 +8,10 @@ export interface ApiResponse {
   error: any;
 }
 
+export interface NewsApiResponse {
+  status: any;
+  source: any;
+  sortBy: any;
+  articles: any;
+  error: any;
+}
