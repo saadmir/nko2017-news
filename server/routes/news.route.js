@@ -18,6 +18,6 @@ router.route('/:articleUrl')
   
 
 /** Load Article when API with articleUel route parameter is hit */
-router.param('articleUel', articleCtrl.load);
+router.param('articleUrl', articleCtrl.load);
 
 export default router;
