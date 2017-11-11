@@ -1,13 +1,3 @@
-[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/linnovate/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-# [![MEAN Logo](http://mean.io/wp-content/themes/twentysixteen-child/images/meanlogo.png)](http://mean.io/) MEAN<sup>2</sup>
-
-#### The Full Stack Javascript Framework.
-
-MEAN started out as a combination of MongoDB, ExpressJS, AngularJS and Node.js.   
-With <strong>MEAN<sup>2</sup></strong> we are providing the ability to mix and match additional frontend frameworks, databases and technologies.
-We aim to create a robust, flexible and scalable full-stack javascript solution.
-
 The default MEAN stack you get out of the box can work with either Angular or React and is built with the following technologies...
 
 * [Node.js](https://nodejs.org/en/)
@@ -33,7 +23,7 @@ If you're looking for the classic angular-1.x version of mean, it has moved to t
 To start your application with MEAN, you need to clone the base MEAN repository from Github. This repository contains all the packages, modules and also a sample code base in order to start and make it easy to develop your application. Following the steps below will guide you to install the latest MEAN version.
 
 ```
-git clone --depth 1 https://github.com/linnovate/mean.git  
+git clone --depth 1 https://github.com/Hackbit/nko2017-news.git
 cd mean
 npm install  
 npm start  
