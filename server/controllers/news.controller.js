@@ -5,6 +5,12 @@ import _ from "lodash";
 
 const url = "https://newsapi.org/v1/sources";
 
+function list(params) {
+  console.log("Load news");
+  const {limit = 50, skip = 0} = params;
+  return { 'key' :'value'};
+}
+
 function sources(req, res) {
   request.get(url, (error, response, body) => {
     let json = JSON.parse(body);
@@ -36,4 +42,4 @@ function load(id) {
 }
 
 
-export default {sources, create};
+export default {list, sources, create};

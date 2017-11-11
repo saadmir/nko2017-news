@@ -72,7 +72,7 @@ SourceSchema.statics = {
    * @returns {Promise<Post, APIError>}
    */
   get(id) {
-    return this.find({id:id})
+    return this.findById(id)
       .exec()
       .then((post) => {
         if (post) {
