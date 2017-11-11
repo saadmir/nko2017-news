@@ -1,7 +1,7 @@
-import {Component, OnInit, OnChanges} from '@angular/core';
-import {Router, NavigationStart} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationStart, ActivatedRoute, Params } from '@angular/router';
 
-import {NewsService} from '../services/news.service';
+import { NewsService } from '../services/news.service';
 
 @Component({
   selector: 'app-root',
@@ -9,23 +9,27 @@ import {NewsService} from '../services/news.service';
   styleUrls: ['./article.component.css']
 })
 
-export class ArticleComponent implements OnInit, OnChanges {
-  title = 'article';
-  article = {};
+export class ArticleComponent implements OnInit {
+  public title = 'article';
+  public article = {};
 
-  constructor(private newsService: NewsService, router: Router) {
-    newsService.articleDetail().then(
-      (data) => {
-        console.log('ARTICLE DETAIL', data);
-        this.article = data;
-      }
-    );
+  public sourceUrl: string;
 
+  constructor(private newsService: NewsService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
+	  this.activatedRoute.queryParams.subscribe((params: Params) => {
+      this.sourceUrl = params['sourceUrl'];
+      this.getArticleDetail();
+    });
   }
 
-  ngOnChanges() {
+  getArticleDetail() {
+    this.newsService.articleDetail(this.sourceUrl).then(
+      (data) => {
+        this.article = data;
+      }
+    );
   }
 }

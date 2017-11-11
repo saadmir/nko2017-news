@@ -10,8 +10,8 @@ import { NewsService } from './services/news.service';
 })
 
 export class AppComponent implements OnInit, OnChanges {
-  title = 'app';
-  newsitems = [];
+  public title = 'app';
+  public newsitems = [];
 
   constructor(private newsService: NewsService, router: Router) {
     // Test only
