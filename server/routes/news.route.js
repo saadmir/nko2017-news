@@ -1,7 +1,4 @@
 import express from 'express';
-import validate from 'express-validation';
-import paramValidation from '../config/param-validation';
-import postCtrl from '../controllers/post.controller';
 import sourceCtrl from '../controllers/source.controller';
 import articlesCtrl from '../controllers/articles.controller';
 

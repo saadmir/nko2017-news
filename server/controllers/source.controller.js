@@ -1,10 +1,11 @@
 import News from '../models/news.model';
 import Source from '../models/source.model';
+import config from '../config/config';
 
 import axios from "axios";
 import _ from "lodash";
 
-const url = "https://newsapi.org/v1/sources";
+const url = config.news.url;
 
 let internal = {
   create: (data) => {
@@ -25,7 +26,7 @@ let internal = {
 let self = {
 
   list: (req, res) => {
-    axios.get(url)
+    axios.get(`${url}/sources`)
     .then(list => {
       if(list.data) {
         _.each(list.data.sources, (source) => {

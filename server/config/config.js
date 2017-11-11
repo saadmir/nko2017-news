@@ -38,6 +38,14 @@ const config = {
   mongo: {
     host: envVars.MONGO_HOST,
     port: envVars.MONGO_PORT
+  },
+  news: {
+    url: "https://newsapi.org/v1",
+    api_key: "2e085d33726a40aa9556343e7d79ddf4"
+  },
+  news_parser: {
+    url: "https://mercury.postlight.com/parser",
+    api_key: "Q4de6bcYUB0E3U24m5JyLGEacmb5yMDp5l23eZEm"
   }
 };
 

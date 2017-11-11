@@ -1,14 +1,15 @@
 import News from '../models/news.model';
 import Source from '../models/source.model';
+import config from '../config/config';
 
 import axios from "axios";
 import _ from "lodash";
 
-const url = "https://newsapi.org/v1/articles";
-const apiKey= "2e085d33726a40aa9556343e7d79ddf4"; //	TODO moved this two configuration file
+const url = config.news.url;
+const apiKey= config.news.api_key; //	TODO moved this two configuration file
 
-const parserUrl = "https://mercury.postlight.com/parser";
-const parserApiKey = "Q4de6bcYUB0E3U24m5JyLGEacmb5yMDp5l23eZEm";
+const parserUrl = config.news_parser.url;
+const parserApiKey = config.news_parser.api_key;
 
 let internal = {
   create: (data) => {
@@ -35,7 +36,7 @@ let self = {
   		params: req.query
 	};
 
-   	axios.get( url , config)
+   	axios.get( `${url}/articles` , config)
     .then(list => {
       if(list.data) {
       }
