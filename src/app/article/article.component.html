@@ -1,20 +1,19 @@
 <div class="container">
   <ng-container>
     <div class="row justify-content-center">
-      <div class="card" style="width: 60rem;">
+      <div class="card" style="width: 70rem;">
         <img class="card-img-top" src="{{ article.lead_image_url }}" alt="Card image cap"/>
         <div class="card-body">
-          <a href="{{ article.url }}"><h2 class="card-title">{{ article.title }}</h2></a>
-          <div class="card-text" [innerHTML]="article.content">
-          </div>
-          <br>
-          <h5>{{ article.author }}</h5>
-          <h5>{{ article.word_count }}</h5>
-          <h3>{{ article.excerpt }}</h3>
-          <h3>{{ article.url }}</h3>
-          <h5>
+          <a href="{{ article.url }}"><h2 class="card-title" style="font-size: 4rem">{{ article.title }}</h2></a>
+          <h5 style="text-align: right">
             <small class="text-muted">{{ article.date_published | date:'MMM d, y, h:mm:ss a' }}</small>
           </h5>
+          <div style="text-align: left"><small class="text-muted">{{ article.word_count /275 | number:0}} minutes read</small></div>
+          <div class="card-text" style="font-size: 20px;" [innerHTML]="article.content"></div>
+          <br>
+          <h5>{{ article.author }}</h5>
+          <!--<h3>{{ article.excerpt }}</h3>-->
+          <h5 class="text-muted">{{ article.url }}</h5>
           <br>
         </div>
       </div>
