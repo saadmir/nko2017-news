@@ -14,6 +14,7 @@ function get(req, res) {
     let json = JSON.parse(body);
     let articles = json["articles"];
     let list = _.each(articles, function (article) {
+      // check if it exist or not
       return create(article);
     });
     return res.json(list);
