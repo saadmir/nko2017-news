@@ -90,6 +90,7 @@
     "apollo-angular": "^0.13.0",
     "apollo-client": "^1.4.2",
     "app-root-path": "^2.0.1",
+    "axios": "^0.17.0",
     "babel-cli": "^6.24.1",
     "body-parser": "^1.17.2",
     "casual": "^1.5.14",

@@ -2,32 +2,14 @@ import express from 'express';
 import validate from 'express-validation';
 import paramValidation from '../config/param-validation';
 import postCtrl from '../controllers/post.controller';
-import newsCtrl from '../controllers/news.controller';
+import sourceCtrl from '../controllers/source.controller';
+import articlesCtrl from '../controllers/articles.controller';
 
 const router = express.Router();
 
-router.route('/')
-/** GET /api/posts - Get list of posts */
-  .get(postCtrl.list)
-  
-  /** POST /api/posts - Create new post */
-  .post(validate(paramValidation.createPost), postCtrl.create);
-  
- router.route('/newsSources').get(newsCtrl.sources);
-
-router.route('/:articleUrl')
-/** GET /api/post/:postId - Get post */
-  .get(postCtrl.get)
-  
-  /** PUT /api/posts/:postId - Update post */
-  .put(validate(paramValidation.updatePost), postCtrl.update)
-  
-  /** DELETE /api/posts/:postId - Delete post */
-  .delete(postCtrl.remove);
-
-router.route('/list')
-  .get(newsCtrl.list);
-/** Load post when API with postId route parameter is hit */
-router.param('postId', postCtrl.load);
+router.route('/sources').get(sourceCtrl.list);
+router.route('/articles').get(articlesCtrl.list);
+router.route('/articles/detail').get(articlesCtrl.detail);
+router.route('/articles/stripped_detail').get(articlesCtrl.strippedDetail);
 
 export default router;
