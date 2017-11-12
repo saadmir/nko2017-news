@@ -23,6 +23,10 @@ export class ArticleComponent implements OnInit {
     return moment.duration(count / 275, 'minutes').humanize();
   }
 
+  getPublishedTime(datetime) {
+    return moment(datetime).fromNow();
+  }
+
   ngOnInit() {
 	  this.activatedRoute.queryParams.subscribe((params: Params) => {
       this.sourceUrl = params['sourceUrl'];
