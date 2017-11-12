@@ -1,5 +1,5 @@
 # NEWS App
-* Personalized news from more then 70 high rankings news sources
+* Personalized news from more than 70 high rankings news sources
 * In built ad blocker
 * Safari browser's reader mode like reading experience by removing all the clutters 
 * In built translator to translate any languages
