@@ -6,3 +6,8 @@
 .card-title {
 	font-size: 3rem;
 }
+
+.card-text {
+	text-align: justify;
+    text-justify: inter-word;
+}
