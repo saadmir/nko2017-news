@@ -1,5 +1,5 @@
 # Ad-Free-News
-* Personalized news from more than 70 high rankings news sources
+* Personalized news from more than 70 high rankings news sources like bloomberg, cnn, techcrunch, bbc, etc...
 * Inbuilt ad blocker
 * Safari browser's reader mode like reading experience by removing all the clutters 
 * Inbuilt translator to translate any languages
@@ -13,6 +13,13 @@
 ![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/main-1.png "Main dashboard")
 ![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/detail-1.png "Detailed Article")
 ![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/detail-2.png "Detailed Article")
+
+# TODO 
+* Integration of geographic location
+* target the news based on location 
+* target the news based on language preferences 
+* Translate the news on prefered language
+* Fixed UI isses
 
 # Ad-Free-News built using 
 
