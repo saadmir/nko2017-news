@@ -5,7 +5,7 @@
 * Inbuilt translator to translate any languages
 * Keep track of your progress , start from where you left
 * Smart estimation system to suggest read time for specific news
-* real time news
+* Real time news delivery
 
 # Demo: http://news.2017.nodeknockout.com
 
