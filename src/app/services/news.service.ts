@@ -34,7 +34,6 @@ export class NewsService {
     const url = this.ARTICLES_URL + source;
     return this.http.get<NewsApiResponse>(url).toPromise().then((response) => {
       try {
-        console.log('NEWS', response);
         if (response.status && response.status === 'ok') {
           return response.articles;
         }
