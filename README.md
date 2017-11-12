@@ -8,9 +8,9 @@
 
 # Screenshot
 
-![Alt text](./screenshot/main-1.png "Main dashboard")
-![Alt text](./screenshot/detail-1.png "Detailed Article")
-![Alt text](./screenshot/detail-2.png "Detailed Article")
+![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/main-1.png "Main dashboard")
+![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/detail-1.png "Detailed Article")
+![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/detail-2.png "Detailed Article")
 
 ## News App built using 
 
