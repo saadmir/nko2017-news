@@ -1,9 +1,10 @@
-# NEWS App
+# Ad-Free-News
 * Personalized news from more than 70 high rankings news sources
 * Inbuilt ad blocker
 * Safari browser's reader mode like reading experience by removing all the clutters 
 * Inbuilt translator to translate any languages
 * Keep track of your progress , start from where you left
+* Smart estimation system to suggest read time for specific news
 
 ## News App built using 
 
