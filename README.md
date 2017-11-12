@@ -1,11 +1,18 @@
 # NEWS App
 * Personalized news from more than 70 high rankings news sources
-* In built ad blocker
+* Inbuilt ad blocker
 * Safari browser's reader mode like reading experience by removing all the clutters 
-* In built translator to translate any languages
+* Inbuilt translator to translate any languages
 * Keep track of your progress , start from where you left
 
-The default MEAN stack you get out of the box can work with either Angular or React and is built with the following technologies...
+## News App built using 
+
+* [News API](https://newsapi.org/)
+* [Mercury Web Parser API](https://mercury.postlight.com/web-parser/)
+* [Google Cloud Translate API](https://cloud.google.com/translate/)
+* [Microsoft Azure](https://azure.microsoft.com/en-us/)
+
+## MEAN stack 
 
 * [Node.js](https://nodejs.org/en/)
 * [Angular4 web starter](https://github.com/AngularClass/angular-starter)
@@ -13,9 +20,7 @@ The default MEAN stack you get out of the box can work with either Angular or Re
 * [Express](https://expressjs.com/)
 * [Innograph](https://github.com/linnovate/innograph) (uses GraphQL for schema standartization)
 * [Bit](https://bitsrc.io/) - (Manages js components, services and schemas)
-
-If you're looking for the classic angular-1.x version of mean, it has moved to this [1.x branch](https://github.com/linnovate/mean/tree/1.x). 
-
+ 
 ## Prerequisite Technologies
 
 * [Git](https://git-scm.com/downloads)
@@ -31,7 +36,7 @@ To start your application with MEAN, you need to clone the base MEAN repository 
 
 ```
 git clone --depth 1 https://github.com/Hackbit/nko2017-news.git
-cd mean
+cd nko2017-news
 npm install  
 npm start  
 ```
