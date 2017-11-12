@@ -22,6 +22,7 @@
 * Translate the news on prefered language
 * Fixed UI isses
 * Add local storage to improve more performance 
+* Enable video support 
 
 # Ad-Free-News built using 
 
