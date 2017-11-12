@@ -7,7 +7,8 @@ import { NewsService } from '../services/news.service';
 @Component({
   selector: 'app-root',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.css'],
+  styles: [':host ::ng-deep img {max-width: 1080px;}']
 })
 
 export class ArticleComponent implements OnInit {
