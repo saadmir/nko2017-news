@@ -5,7 +5,7 @@
         <div class="card-body">
           <a href="{{ article.url }}"><h2 class="card-title" style="font-size: 4rem">{{ article.title }}</h2></a>
           <h5 style="text-align: right">
-            <small class="text-muted">{{ article.date_published | date:'MMM d, y, h:mm:ss a' }}</small>
+            <small class="text-muted">Published {{ getPublishedTime(article.date_published) }}</small>
           </h5>
           <div style="text-align: left">
             <small class="text-muted">~ {{ getReadingTime(article.word_count) }} read</small>

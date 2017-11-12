@@ -2,19 +2,21 @@
   <ng-container *ngFor="let item of newsitems">
     <div class="row justify-content-center">
       <div class="card" style="width: 60rem;">
-        <a href="{{ item.url }}"><img class="card-img-top" src="{{ item.urlToImage }}" alt="Card image cap" /></a>
+        <a [routerLink]="['/article']" [queryParams]="{sourceUrl: item.url}"><img class="card-img-top" src="{{ item.urlToImage }}" alt="Card image cap" /></a>
         <div class="card-body">
-          <a href="{{ item.url }}"><h2 class="card-title">{{ item.title }}</h2></a>
-          <p class="card-text">{{ item.description }}</p>
+          <a [routerLink]="['/article']" [queryParams]="{sourceUrl: item.url}"><h2 class="card-title">{{ item.title }}</h2></a>
+          <p class="card-text" style="font-size: 20px">{{ item.description }}</p>
           <br>
-          <h5>{{ item.author }}</h5>
-          <h5><small class="text-muted">{{ item.publishedAt | date:'MMM d, y, h:mm:ss a' }}</small></h5>
+          <div style="text-align: right">
+            <h5>{{ item.author }}</h5>
+            <h5>
+              <small class="text-muted">Published {{ getPublishedTime(item.publishedAt) }}</small>
+            </h5>
+          </div>
           <br>
-          <a [routerLink]="['/article']" [queryParams]="{sourceUrl: item.url}"  class="btn btn-primary">Reader View</a>
         </div>
       </div>
     </div>
-    <br>
     <br>
   </ng-container>
 </div>

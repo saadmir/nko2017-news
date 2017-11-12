@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
+import * as moment from 'moment';
 
 import { NewsService } from './services/news.service';
 
@@ -21,6 +22,10 @@ export class AppComponent implements OnInit, OnChanges {
         this.newsitems = data;
       }
     );
+  }
+
+  getPublishedTime(datetime){
+    return moment(datetime).fromNow();
   }
 
   ngOnInit() {
