@@ -1,9 +1,9 @@
-NEWS App
-Personalized news from more then 70 high rankings news sources
-In built ad blocker
-Safari browser's reader mode like reading experience by removing all the clutters 
-In built translator to translate any languages
-Keep track of your progress , start from where you left
+# NEWS App
+* Personalized news from more then 70 high rankings news sources
+* In built ad blocker
+* Safari browser's reader mode like reading experience by removing all the clutters 
+* In built translator to translate any languages
+* Keep track of your progress , start from where you left
 
 The default MEAN stack you get out of the box can work with either Angular or React and is built with the following technologies...
 
