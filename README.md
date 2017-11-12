@@ -4,6 +4,7 @@
 * Safari browser's reader mode like reading experience by removing all the clutters 
 * In built translator to translate any languages
 * Keep track of your progress , start from where you left
+* Smart estimation system to suggest read time for specific news
 
 The default MEAN stack you get out of the box can work with either Angular or React and is built with the following technologies...
 
