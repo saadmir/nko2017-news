@@ -1,25 +1,29 @@
 <h1 style="text-align: center;font-size: 45px;font-weight: 600;margin: 50px;">Ad-Free-News</h1>
 <div class="container">
-    <div class="row justify-content-center">
-      <div class="card" style="width: 70rem;">
-        <img class="card-img-top" src="{{ article.lead_image_url }}" alt="Card image cap"/>
-        <div class="card-body">
-          <a href="{{ article.url }}"><h2 class="card-title" style="font-size: 4rem">{{ article.title }}</h2></a>
-          <h5 style="text-align: right">
-            <small class="text-muted">Published {{ getPublishedTime(article.date_published) }}</small>
-          </h5>
-          <div style="text-align: left">
-            <small class="text-muted">~ {{ getReadingTime(article.word_count) }} read</small>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <i class="fa fa-spinner fa-spin fa-5x" [hidden]="article"></i>
+
+    <div *ngIf="article; else loading; let user">
+      <i class="fa fa-spinner fa-spin fa-5x" [hidden]="article.content"></i>
+      <div class="row justify-content-center" [hidden]="!article.content">
+        <div class="card">
+          <img class="card-img-top" src="{{ article.lead_image_url }}"/>
+          <div class="card-body">
+            <a href="{{ article.url }}"><h2 class="card-title" style="font-size: 4rem">{{ article.title }}</h2></a>
+            <h5 style="text-align: right">
+              <small class="text-muted">Published {{ getPublishedTime(article.date_published) }}</small>
+            </h5>
+            <div style="text-align: left">
+              <small class="text-muted">~ {{ getReadingTime(article.word_count) }} read</small>
+            </div>
+            <div class="card-text" style="font-size: 20px;" [innerHTML]="article.content"></div>          
+            <h5>{{ article.author }}</h5>
+            <!--<h3>{{ article.excerpt }}</h3>-->
+            <h5 class="text-muted">{{ article.url }}</h5>
+            <br>
           </div>
-          <div class="card-text" style="font-size: 20px;" [innerHTML]="article.content"></div>
-          <br>
-          <h5>{{ article.author }}</h5>
-          <!--<h3>{{ article.excerpt }}</h3>-->
-          <h5 class="text-muted">{{ article.url }}</h5>
-          <br>
         </div>
       </div>
     </div>
-    <br>
-    <br>
+    <ng-template #loading><i class="fa fa-spinner fa-spin fa-5x" [hidden]="article"></i></ng-template>
 </div>
