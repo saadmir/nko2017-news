@@ -5,6 +5,7 @@
 * Inbuilt translator to translate any languages
 * Keep track of your progress , start from where you left
 * Smart estimation system to suggest read time for specific news
+* real time news
 
 # Demo: http://news.2017.nodeknockout.com
 
@@ -20,6 +21,7 @@
 * target the news based on language preferences 
 * Translate the news on prefered language
 * Fixed UI isses
+* Add local storage to improve more performance 
 
 # Ad-Free-News built using 
 
