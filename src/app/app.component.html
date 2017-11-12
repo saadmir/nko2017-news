@@ -1,8 +1,15 @@
 <h1 style="text-align: center;font-size: 45px;font-weight: 600;margin: 50px;">Ad-Free-News</h1>
-<div class="container">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+<div class="container" [hidden]="!newsitems">    
   <ng-container *ngFor="let item of newsitems">
     <div class="row justify-content-center">
-      <div class="card" style="width: 60rem;">
+      <i class="fa fa-spinner fa-spin fa-5x" [hidden]="item"></i>
+    </div>
+    <div class="row justify-content-center">
+      
+      <div class="card" style="width: 60rem;" [hidden]="!item">
         <a [routerLink]="['/article']" [queryParams]="{sourceUrl: item.url}"><img class="card-img-top" src="{{ item.urlToImage }}" alt="Card image cap" /></a>
         <div class="card-body">
           <a [routerLink]="['/article']" [queryParams]="{sourceUrl: item.url}"><h2 class="card-title">{{ item.title }}</h2></a>
