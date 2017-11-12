@@ -5,9 +5,10 @@
 
 .card-title {
 	font-size: 3rem;
+	font-family: "Times New Roman", Georgia, Serif;
 }
 
 .card-text {
-	text-align: justify;
-    text-justify: inter-word;
+	
+    font-family: "Times New Roman", Georgia, Serif;
 }
