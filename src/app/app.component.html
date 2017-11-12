@@ -7,8 +7,7 @@
     <div class="row justify-content-center">
       <i class="fa fa-spinner fa-spin fa-5x" [hidden]="item"></i>
     </div>
-    <div class="row justify-content-center">
-      
+    <div class="row justify-content-center">      
       <div class="card" style="width: 60rem;" [hidden]="!item">
         <a [routerLink]="['/article']" [queryParams]="{sourceUrl: item.url}"><img class="card-img-top" src="{{ item.urlToImage }}" alt="Card image cap" /></a>
         <div class="card-body">
