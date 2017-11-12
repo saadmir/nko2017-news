@@ -1,7 +1,6 @@
-<h1 style="text-align: center;font-size: 45px;font-weight: 600;margin: 50px;">News</h1>
+<h1 style="text-align: center;font-size: 45px;font-weight: 600;margin: 50px;">Ad-Free-News</h1>
 <div class="container">
   <ng-container *ngFor="let item of newsitems">
-    <div class="clearfix visible-xx"></div>
     <div class="row justify-content-center">
       <div class="card" style="width: 60rem;">
         <a [routerLink]="['/article']" [queryParams]="{sourceUrl: item.url}"><img class="card-img-top" src="{{ item.urlToImage }}" alt="Card image cap" /></a>

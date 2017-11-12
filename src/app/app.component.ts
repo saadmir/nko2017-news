@@ -17,8 +17,7 @@ export class AppComponent implements OnInit, OnChanges {
   constructor(private newsService: NewsService, router: Router) {
 
     newsService.news().then(
-      (data) => {
-        console.log('> > > [app.component.ts:19]', data);
+      (data) => {      
         this.newsitems = data;
       }
     );
