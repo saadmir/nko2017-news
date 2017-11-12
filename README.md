@@ -1,4 +1,4 @@
-# NEWS App
+# Ad-Free-News
 * Personalized news from more than 70 high rankings news sources
 * In built ad blocker
 * Safari browser's reader mode like reading experience by removing all the clutters 
