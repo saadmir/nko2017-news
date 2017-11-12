@@ -6,13 +6,15 @@
 * Keep track of your progress , start from where you left
 * Smart estimation system to suggest read time for specific news
 
+# Demo: http://news.2017.nodeknockout.com
+
 # Screenshot
 
 ![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/main-1.png "Main dashboard")
 ![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/detail-1.png "Detailed Article")
 ![Alt text](https://github.com/Hackbit/nko2017-news/blob/master/screenshots/detail-2.png "Detailed Article")
 
-## News App built using 
+# Ad-Free-News built using 
 
 * [News API](https://newsapi.org/)
 * [Mercury Web Parser API](https://mercury.postlight.com/web-parser/)
@@ -64,3 +66,8 @@ If all the packages and modules installed successfully, your default web browser
 * Anuj Patel
 * Saad Mir
 * Nikunj Chapadia
+
+## Feedback
+  Any feedback is most welcome 
+
+## Thank You for your contribution and support
